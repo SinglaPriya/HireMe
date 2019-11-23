@@ -1,0 +1,14 @@
+<header>
+  <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <div>
+          <a class="navbar-brand " href="#"><img src="/assets/hiremelogo.png"  style="height: 50px; width:150px"  class="img-responsive"></a>
+        </div>
+        <ul class="nav navbar-nav " style="color:#eb1c09">
+          <li><a *ngIf="!loginService.isSeekerLogin() && !loginService.isRecruiterLogin()" routerLink="/recruiterLogin" >Want to post a Job?</a></li>
+          <li><a *ngIf="!loginService.isSeekerLogin() && !loginService.isRecruiterLogin()" routerLink="/seekerLogin" >Sign Up?</a></li>
+          <li><a *ngIf="loginService.isSeekerLogin() || loginService.isRecruiterLogin()" (click)="logout()" class="btn">Log Out</a></li>
+        </ul>
+      </div>
+    </nav>
+</header>
