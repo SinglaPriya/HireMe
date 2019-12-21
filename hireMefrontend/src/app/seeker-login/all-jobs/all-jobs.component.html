@@ -1,0 +1,29 @@
+<div class="container">
+  <div class="row">
+    <div class="table-responsive table-hover table-striped">
+      <table class="table ">
+        <thead>
+          <th> Company Name</th>
+          <th> Role</th>
+          <th> Job Description</th>
+          <th> Recruiter Email</th>
+          <th> Apply</th>
+        </thead>
+        <tr *ngFor="let job of jobs">
+          <td>{{job.companyName}}</td>
+          <td>{{job.role}}</td>
+          <td>{{job.jobDesc}}</td>
+          <td>{{job.recruiter.email}}</td>
+          <td>
+            <span *ngIf="!checkIfJobApplied(job)">
+              <button class="btn btn-md btn-block"  [value]="buttonVal" (click)="applyJob(job)">Apply</button>
+            </span>
+            <span *ngIf="checkIfJobApplied(job)">
+              <label>Applied</label>
+            </span>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>

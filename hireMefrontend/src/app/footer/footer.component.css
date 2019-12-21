@@ -1,0 +1,17 @@
+ul li{
+    display: inline;
+    /* align-content: flex-start; */
+    /* position: fixed; */
+    /* bottom: 5%; */
+    /* margin: 0px 0px 0px 0px; */
+    margin-left: 20px;
+    
+}
+ul{
+    position: fixed;
+    bottom: 1%;
+}
+a{
+    color: gray;
+    font-size: 1em;
+}
