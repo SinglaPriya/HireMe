@@ -7,9 +7,10 @@ import { SeekerLoginComponent } from './seeker-login/seeker-login.component';
 import { RouterGuardSeekerService } from './services/router-guard-seeker.service';
 import { JobsByRecComponent } from './recruiter-login/jobs-by-rec/jobs-by-rec.component';
 import { RouteGuardRecruiterService } from './services/router-guard-recruiter.service';
+import { HomeComponent } from './home/home.component';
 
 const routes: Routes = [
-  {path: '', component: SeekerLoginComponent},
+  {path: '', component: HomeComponent},
   {path: 'recruiterLogin', component: RecruiterLoginComponent},
   {path: 'seekerLogin', component: SeekerLoginComponent},
   {path: 'alljobs', component: AllJobsComponent, canActivate: [RouterGuardSeekerService]},

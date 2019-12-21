@@ -32,7 +32,6 @@ export class JobsByRecComponent implements OnInit {
     });
    }
 
-
    jobsByRec() {
     this.jobsService.getJobsByRec(this.recruiter.email)
     .then(res => {

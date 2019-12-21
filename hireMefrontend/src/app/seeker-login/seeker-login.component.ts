@@ -25,8 +25,8 @@ export class SeekerLoginComponent implements OnInit {
     });
 
     this.loginForm = new FormGroup({
-      lemail: new FormControl(),
-      lpassword: new FormControl(),
+      lemail: new FormControl('',Validators.email),
+      lpassword: new FormControl('',Validators.required),
     });
 
    

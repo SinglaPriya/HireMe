@@ -16,6 +16,8 @@ import { GetJobsService } from './services/get-jobs.service';
 import { RouterGuardSeekerService } from './services/router-guard-seeker.service';
 import { RouteGuardRecruiterService } from './services/router-guard-recruiter.service';
 import { HeaderComponent } from './header/header.component';
+import { FooterComponent } from './footer/footer.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +27,8 @@ import { HeaderComponent } from './header/header.component';
     AllJobsComponent,
     JobsByRecComponent,
     HeaderComponent,
+    FooterComponent,
+    HomeComponent,
   ],
   imports: [
     RouterModule,

@@ -1,42 +1,10 @@
-<div class="jobsByRec">
-  <div class="container">
-    <div class="row">
-      <div class="table-responsive table-hover table-striped">
-        <table class="table ">
-          <thead>
-            <th> Company Name</th>
-            <th> Role</th>
-            <th> Job Description</th>
-            <th> View Applicants</th>
-          </thead>
-          <tr *ngFor="let job of jobs">
-            <td>{{job.companyName}}</td>
-            <td>{{job.role}}</td>
-            <td>{{job.jobDesc}}</td>
-            <td>
-              <button class="btn btn-md" >
-                <a (click)="viewApplicants(job)" data-toggle="modal" data-target="#viewModal">View Applicants</a>
-              </button>
-            </td>
-          </tr>
-        </table>
-        <div>
-          <p class="text-center">
-            <a data-toggle="modal" data-target="#addJobModal"> Click here to add a new Job. </a> 
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-</div> 
-
 <!-- Add Job Modal -->
 <div id="addJobModal" class="modal fade" role="dialog">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
         <h4 class="modal-title">Add Job</h4>
-        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <button type="button" class="close" data-dismiss="modal" (click)="jobsByRec()">&times;</button>
       </div>
       <div class="modal-body"></div>
           <form class="form-horizontal" role="form" [formGroup]="addJobForm" (ngSubmit)="addJob()">
@@ -100,3 +68,37 @@
     </div>
   </div>
 </div>
+
+<!-- View all jobs by rec -->
+<div class="jobsByRec">
+  <div class="container">
+    <div class="row">
+      <div class="table-responsive table-hover table-striped">
+        <table class="table ">
+          <thead>
+            <th> Company Name</th>
+            <th> Role</th>
+            <th> Job Description</th>
+            <th> View Applicants</th>
+          </thead>
+          <tr *ngFor="let job of jobs">
+            <td>{{job.companyName}}</td>
+            <td>{{job.role}}</td>
+            <td>{{job.jobDesc}}</td>
+            <td>
+              <button class="btn btn-md" >
+                <a (click)="viewApplicants(job)" data-toggle="modal" data-target="#viewModal">View Applicants</a>
+              </button>
+            </td>
+          </tr>
+        </table>
+        <div>
+          <p class="text-center">
+            <a data-toggle="modal" data-target="#addJobModal"> Click here to add a new Job. </a> 
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> 
+

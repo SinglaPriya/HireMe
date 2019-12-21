@@ -1,7 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
 *{
     color: #eb1c09;
+    font-family: "Poppins", sans-serif;
 }
+
+  body {
+    background: #fcf2f1;
+  }
 
 .successTxt{
     color: green;
@@ -14,21 +19,35 @@
 }
 
 .modal-header{
-    /* display: inline-block; */
     text-align: center;
 }
 
 button{
+    display: block;
+    text-align: center;
     color: #eb1c09;
-
+    border: 1px solid #eb1c09;
+    background-color: white;
+    font-family: inherit;
+    font-weight: 700;
+    line-height: inherit;
+    text-transform: uppercase;
 }
 
-button:hover {
+button:not(:disabled) {
+    cursor: pointer;
+    padding: .5rem .8rem;
+    margin: 0px 0px 0px 0.5rem;
+    border-radius: 4px;
+}
+
+button:hover > .fas, button:hover {
     background: #eb1c09;
     color: white;
   }
-
 .form-horizontal{
     margin: 5px;
 }
-  
+.form-control{
+  margin-right: .5rem;
+}

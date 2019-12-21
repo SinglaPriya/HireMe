@@ -18,17 +18,20 @@
                 <div class="form-group" >
                   <label class="col-md-2" for="Email">Email</label>
                   <input formControlName="lemail" class="form-control"  id="LEmail" name="Email" type="text">
+                  
                 </div>
+                <div *ngIf="loginForm.get('lemail').hasError('email')"> Email is required.</div>
               </div>
               <div class="col-md-12">
                 <div class="form-group">
                   <label class="col-md-2" for="Password">Password</label>
                   <input formControlName="lpassword" class="form-control" id="LPassword" name="Password" type="password" >
                 </div>
+                <div *ngIf="loginForm.get('lpassword').hasError('required') && loginForm.get('lpassword').touched"> Password is required.</div>
               </div>
               <div class="form-group">
                 <div class=" col-md-12">
-                  <input type="submit" value="Log in" class="btn btn-primary w-100">
+                  <button type="submit" value="Log in" class="btn btn-primary w-100" [disabled]="!loginForm.valid">LogIn</button>
                 </div>
               </div>
               <p class="text-center">
